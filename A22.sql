@@ -2,7 +2,8 @@
 --[OuterPackageID] ,[Brand] ,[Size] ,[LeadTimeDays] ,[QuantityPerOuter] ,[IsChillerStock] ,[Barcode] ,[TaxRate]  ,[UnitPrice],[RecommendedRetailPrice] ,
 --[TypicalWeightPerUnit] ,[MarketingComments]  ,[InternalComments], [CountryOfManufacture], [Range], [Shelflife]. 
 --Migrate all the data in the original stock item table.
-
+use WideWorldImporters;
+go
 drop table if exists ods.StockItem;
 go
 select ws.StockItemID, ws.StockItemName, ws.SupplierID, ws.ColorID, ws.UnitPackageID, ws.OuterPackageID,
